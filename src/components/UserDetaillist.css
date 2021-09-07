@@ -1,0 +1,16 @@
+.user-detail {
+  background-color: #ed6363;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.user__detail-field li {
+  background-color: #ffffff;
+  width: 100%;
+  list-style: none;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 10px;
+}

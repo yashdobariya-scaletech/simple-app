@@ -1,0 +1,35 @@
+.user {
+  background-color: #ed6363;
+  padding: 50px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.user-input__control label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.user-input__control input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.action__control {
+  text-align: center;
+  padding: 20px;
+}
+
+.action__control button {
+  background-color: #333333;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 20px;
+}
