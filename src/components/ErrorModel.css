@@ -5,22 +5,21 @@
   width: 100%;
   height: 100vh;
   z-index: 10;
-  /* background-color: rgba(0, 0, 0, 0.75%); */
-  background-color: rgba(0, 0, 0, 0.75%);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal {
   position: relative;
   margin: 0 auto;
   margin-top: 300px;
-  width: 25%;
+  width: 35%;
   z-index: 100;
   overflow: hidden;
   background-color: white;
 }
 
 .modal__header {
-  background-color: #333333;
+  background-color: #ed6363;
   color: white;
 }
 
@@ -29,18 +28,19 @@
 }
 
 .modal__error-message {
-  font-size: 20px;
+  font-size: 25px;
   padding: 20px;
 }
 
 .modal__footer {
   text-align: right;
-  padding: 10px;
+  padding: 30px;
 }
 
 .modal__footer button {
+  border: none;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #333333;
+  background-color: #ed6363;
   color: white;
 }

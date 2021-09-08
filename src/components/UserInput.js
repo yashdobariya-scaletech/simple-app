@@ -1,40 +1,40 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import ErrorModel from "./ErrorModel";
 import "./UserInput.css";
 
 export default function UserInput(props) {
-  const [enterUsername, setenterUsername] = useState('')
-  const [enterAge, setenterAge] = useState('')
+
+  const usernameRef = useRef()
+  const ageRef = useRef()
+
   const [error, setError] = useState('')
 
   const submitHandle = (event) =>{
     event.preventDefault();
 
-    if(enterUsername.trim().length === 0 || enterAge.trim().length === 0){
+    const enterName = usernameRef.current.value;
+    const enterUserAge = ageRef.current.value;
+
+
+    if(enterName.trim().length === 0 || enterUserAge.trim().length === 0){
       setError({
         title:"Invalid input",
         message:"please enter a valid name and age"
       })
     }
-    if(+enterAge < 5 ){
+    if(+enterUserAge < 5 ){
       setError({
         title:"Invalid input",
         message:"please enter a valid age"
       })
     }
-    props.onAddUser(enterUsername, enterAge);
 
-    setenterUsername('');
-    setenterAge('');
+    props.onAddUser(enterName, enterUserAge);
+    usernameRef.current.value = "";
+    ageRef.current.value = "";
   }
 
-  const usernameChangeHandle = (event) => {
-    setenterUsername(event.target.value);
-  }
 
-  const ageChangeHandle = (event) => {
-    setenterAge(event.target.value);
-  }
   
   const errorChangeHandle = () => {
     setError(null)
@@ -47,11 +47,11 @@ export default function UserInput(props) {
       <form onSubmit={submitHandle}>
         <div className="user-input__control">
           <label>Name:</label>
-          <input type="text" value={enterUsername} onChange={usernameChangeHandle}/>
+          <input type="text" ref={usernameRef} />
         </div>
         <div className="user-input__control">
           <label>Age:</label>
-          <input type="number" value={enterAge} onChange={ageChangeHandle}/>
+          <input type="number" ref={ageRef} />
         </div>
         <div className="action__control">
           <button type="submit">Add User</button>
