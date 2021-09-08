@@ -22,6 +22,6 @@ code {
 }
 
 .container {
-  padding: 50px 300px;
+  margin: 70px auto;
   max-width: 1800px;
 }
