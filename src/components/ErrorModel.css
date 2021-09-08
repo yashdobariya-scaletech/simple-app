@@ -15,16 +15,21 @@
   width: 35%;
   z-index: 100;
   overflow: hidden;
-  background-color: white;
+  /* background-color: white; */
+  background-color: #E2DDBF;
+
 }
 
 .modal__header {
-  background-color: #ed6363;
-  color: white;
+  /* background-color: #ed6363; */
+  background-color: #4D837A;
+  /* color: white; */
+
 }
 
 .modal__header {
   padding: 10px;
+  font-size: 20px;
 }
 
 .modal__error-message {
@@ -40,7 +45,8 @@
 .modal__footer button {
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ed6363;
+  font-size: 20px;
+  /* background-color: #ed6363; */
+  background-color: #4D837A;
   color: white;
 }
