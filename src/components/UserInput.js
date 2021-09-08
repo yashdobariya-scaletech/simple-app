@@ -9,6 +9,7 @@ export default function UserInput(props) {
 
   const submitHandle = (event) =>{
     event.preventDefault();
+
     if(enterUsername.trim().length === 0 || enterAge.trim().length === 0){
       setError({
         title:"Invalid input",
@@ -53,7 +54,7 @@ export default function UserInput(props) {
           <input type="number" value={enterAge} onChange={ageChangeHandle}/>
         </div>
         <div className="action__control">
-          <button type="submit"> Add User</button>
+          <button type="submit">Add User</button>
         </div>
       </form>
     </div>

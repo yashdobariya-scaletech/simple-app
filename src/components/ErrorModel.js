@@ -3,6 +3,7 @@ import './ErrorModel.css'
 
 export default function ErrorModel(props) {
     return (
+        <div className="background">
         <div className="modal">
             <header className="modal__header">
                 <h2>{props.title}</h2>
@@ -13,6 +14,7 @@ export default function ErrorModel(props) {
             <footer className="modal__footer"> 
                 <button onClick={props.onConfirm}>Okay</button>
             </footer>
+        </div>
         </div>
     )
 }

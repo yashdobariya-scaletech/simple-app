@@ -5,8 +5,8 @@ export default function UserDetailList(props) {
         <div className="user-detail">
                 <ul className="user__detail-field">
                     {props.users.map((user, index) => (
-                    <li>
-                        key={index}{user.name} ({user.age} years old)
+                    <li key={index}>
+                        {user.name} ({user.age} years old)
                     </li>
                     ))}
                 </ul>
